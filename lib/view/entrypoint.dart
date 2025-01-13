@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:foody/constants/constants.dart';
-import 'package:foody/view/bottom_naviation.dart';
+import 'package:foody/view/bottom_navigation.dart';
 import 'package:foody/view/profile/profile_page.dart';
 import 'package:foody/view/search/search_page.dart';
 import 'package:get/get.dart';
