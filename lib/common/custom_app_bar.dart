@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget {
                 CircleAvatar(
                   radius: 23.r,
                   backgroundColor: kSecondary,
-                  backgroundImage: const NetworkImage(""),
+                  backgroundImage: const NetworkImage("https://makepix.b-cdn.net/makepix_c8c9f3cb-2fe2-4c7a-ad96-1a201709c35d/cute-pink-anime-girl-95ec2708_0_m.webp"),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom:6.h, left: 8.w),
@@ -48,5 +48,16 @@ class CustomAppBar extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String getTimeofDay() {
+    final hour = DateTime.now().hour;
+    if (hour >= 0 && hour < 12) {
+      return "";
+    } else if (hour < 12 && hour < 16) {
+      return "";
+    } else {
+      return "";
+    }
   }
 }
