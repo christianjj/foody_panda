@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/common/app_style.dart';
 import 'package:foody/common/reusable_text.dart';
 import 'package:foody/constants/uidata.dart';
+import 'package:foody/controllers/category_controller.dart';
+import 'package:get/get.dart';
 
 import '../../../constants/constants.dart';
 
@@ -11,6 +13,7 @@ class CategoryList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(CategoryController());
     return Container(
       height: 80.h,
       padding: EdgeInsets.only(left: 12.w, top: 10.h),
