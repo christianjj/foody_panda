@@ -13,7 +13,7 @@ Widget bottomNavigation(BuildContext context, TabIndexController controller) =>
                 showSelectedLabels: false,
                 showUnselectedLabels: false,
                 unselectedIconTheme: const IconThemeData(color: Colors.black38),
-                selectedItemColor: kDark,
+                selectedItemColor: kSecondary,
                 onTap: (value) {
                   controller.setTabIndex = value;
                 },
