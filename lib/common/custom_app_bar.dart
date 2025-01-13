@@ -19,23 +19,29 @@ class CustomAppBar extends StatelessWidget {
         margin: EdgeInsets.only(top: 20.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            CircleAvatar(
-              radius: 25.r,
-              backgroundColor: kSecondary,
-              backgroundImage: const NetworkImage(""),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom:6.h, left: 8.w),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ReusableText(text: "Delivery to", style: appStyle(13, kSecondary, FontWeight.w600)),
-                  SizedBox(width: width * 0.65,
-                      child: Text("165543 vasda das dasdad asda sd as dsa das das dasd as", overflow: TextOverflow.ellipsis, style: appStyle(11, kGrayLight, FontWeight.normal),)),
-                ],
-              ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                CircleAvatar(
+                  radius: 23.r,
+                  backgroundColor: kSecondary,
+                  backgroundImage: const NetworkImage(""),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom:6.h, left: 8.w),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ReusableText(text: "Delivery to", style: appStyle(13, kSecondary, FontWeight.w600)),
+                      SizedBox(width: width * 0.65,
+                          child: Text("165543 vasda das dasdad asda sd as dsa das das dasd as", overflow: TextOverflow.ellipsis, style: appStyle(11, kGrayLight, FontWeight.normal),)),
+                    ],
+                  ),
+                ),
+              ],
             ),
             const Text("☀️", style: TextStyle(fontSize: 35))
           ],
