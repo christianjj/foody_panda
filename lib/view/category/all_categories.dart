@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 
 import '../../common/app_style.dart';
 import '../../constants/uidata.dart';
+import 'CategoryTile.dart';
 import 'category_page.dart';
 
 class AllCategories extends StatelessWidget {

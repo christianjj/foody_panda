@@ -5,6 +5,8 @@ import 'package:foody/common/custom_container.dart';
 import 'package:foody/constants/constants.dart';
 import 'package:foody/view/home/widgets/category_list.dart';
 
+import '../../common/heading.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -16,9 +18,12 @@ class HomePage extends StatelessWidget {
           preferredSize: Size.fromHeight(130.h),
           child: const CustomAppBar()),
       body: SafeArea(
-        child: CustomContainer(containerContent: const Column(
+        child: CustomContainer(containerContent: Column(
           children: [
-            CategoryList()
+            const CategoryList(),
+            Heading(text: "Nearby Restaurant", onTap: () {}),
+            Heading(text: "Try Something New", onTap: () {}),
+            Heading(text: "Food Closer to you", onTap: () {}),
           ],
         )),
       ),
