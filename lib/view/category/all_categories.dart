@@ -3,9 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/common/back_ground_contatiner.dart';
 import 'package:foody/common/reusable_text.dart';
 import 'package:foody/constants/constants.dart';
+import 'package:get/get.dart';
 
 import '../../common/app_style.dart';
 import '../../constants/uidata.dart';
+import 'category_page.dart';
 
 class AllCategories extends StatelessWidget {
   const AllCategories({super.key});
@@ -30,25 +32,12 @@ class AllCategories extends StatelessWidget {
               scrollDirection: Axis.vertical,
               children: List.generate(categories.length, (i) {
                 var category = categories[i];
-                return ListTile(
-                  leading: CircleAvatar(
-                    radius: 18.r,
-                    backgroundColor: kGrayLight,
-                    child:
-                        Image.network(category["imageUrl"], fit: BoxFit.contain),
-                  ),
-                  title: ReusableText(
-                      text: category["title"],
-                      style: appStyle(12, kGray, FontWeight.normal)),
-                  trailing: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: kGray,
-                    size: 15.r,
-                  ),
-                );
+                return CategoryTile(category: category);
               })),
         ),
       ),
     );
   }
 }
+
+
