@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foody/constants/constants.dart';
 import 'package:foody/constants/uidata.dart';
+import 'package:foody/view/home/widgets/restaurant_widget.dart';
 
 class NearbyRestaurant extends StatelessWidget {
   const NearbyRestaurant({super.key});
@@ -9,20 +9,19 @@ class NearbyRestaurant extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 210.h,
+      height: 194.h,
       padding: EdgeInsets.only(left: 12.w, top: 10.h),
-      child:ListView(
+      child: ListView(
           scrollDirection: Axis.horizontal,
           children: List.generate(restaurants.length, (i) {
             var restaurant = restaurants[i];
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200.h,
-                width: 150.w,
-                color: kSecondary,
-              ),
-            );
+            return RestaurantWidget(
+                image: restaurant['imageUrl'],
+                logo: restaurant['logoUrl'],
+                title: restaurant['title'],
+                time: restaurant['time'],
+                rating: restaurant['ratingCount'],
+                onTap: () {});
           })),
     );
   }
