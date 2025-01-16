@@ -6,6 +6,8 @@ import 'package:foody/constants/constants.dart';
 import 'package:foody/view/home/all_fastest_foods.dart';
 import 'package:foody/view/home/recommendations_page.dart';
 import 'package:foody/view/home/widgets/category_list.dart';
+import 'package:foody/view/home/widgets/food_list.dart';
+import 'package:foody/view/home/widgets/nearby_restaurant_list.dart';
 import 'package:get/get.dart';
 
 import '../../common/heading.dart';
@@ -31,16 +33,19 @@ class HomePage extends StatelessWidget {
               duration: const Duration(milliseconds: 900)
               );
             }),
+            const NearbyRestaurant(),
             Heading(text: "Try Something New", onTap: () {
               Get.to(() => const RecommendationsPage(),
                   transition: Transition.cupertino,
                   duration: const Duration(milliseconds: 900));
             }),
+            const FoodList(),
             Heading(text: "Food Closer to you", onTap: () {
               Get.to(() => const AllFastestFoods(),
                   transition: Transition.cupertino,
                   duration: const Duration(milliseconds: 900));
             }),
+            const FoodList()
           ],
         )),
       ),

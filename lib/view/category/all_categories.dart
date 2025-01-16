@@ -3,12 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/common/back_ground_contatiner.dart';
 import 'package:foody/common/reusable_text.dart';
 import 'package:foody/constants/constants.dart';
-import 'package:get/get.dart';
 
 import '../../common/app_style.dart';
 import '../../constants/uidata.dart';
 import 'CategoryTile.dart';
-import 'category_page.dart';
 
 class AllCategories extends StatelessWidget {
   const AllCategories({super.key});
@@ -40,5 +38,3 @@ class AllCategories extends StatelessWidget {
     );
   }
 }
-
-

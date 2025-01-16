@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/constants/constants.dart';
 
 class CustomContainer extends StatelessWidget {
-  CustomContainer({super.key, required this.containerContent});
+  const CustomContainer({super.key, required this.containerContent});
 
   final Widget containerContent;
 
