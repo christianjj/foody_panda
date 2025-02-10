@@ -60,16 +60,48 @@ class RestaurantTile extends StatelessWidget {
                     width: 10.w,
                   ),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       ReusableText(
-                          text: restaurant['title'],
-                          style: appStyle(11, kDark, FontWeight.w400))
+                        text: restaurant['title'],
+                        style: appStyle(11, kDark, FontWeight.w400),
+                      ),
+                      ReusableText(
+                        text: "Delivery Time: ${restaurant['time']}",
+                        style: appStyle(11, kGray, FontWeight.w400),
+                      ),
+                      SizedBox(
+                        width: width * 0.7,
+                        child: Text(
+                          restaurant['coords']['address'],
+                          overflow: TextOverflow.ellipsis,
+                          style: appStyle(9, kGray, FontWeight.w400),
+                        ),
+                      )
                     ],
                   )
                 ],
               ),
+            ),
+          ),
+          Positioned(
+            right: 5.w,
+              top: 6.h,
+            child: Container(
+              width: 60.w,
+              height: 19.h,
+              decoration: BoxDecoration(
+                  color: restaurant['isAvailable'] == true ||
+                          restaurant['isAvailable'] == null
+                      ? kPrimary
+                      : kSecondaryLight,
+                  borderRadius: BorderRadius.circular(10.r)),
+              child: ReusableText(
+                  text: restaurant['isAvailable'] == true ||
+                      restaurant['isAvailable'] == null
+                      ? "Open"
+                      : "Closed", style: appStyle(12, kLightWhite, FontWeight.w600)),
             ),
           )
         ]));
